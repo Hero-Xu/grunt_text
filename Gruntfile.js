@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 				banner: '/*! <%pkg.name%>-<%pkg.version%>.js <%= grunt.template.today("yyyy-mm-dd") %> */\n'
 			},
 			build: {
-				src: 'build/js/*.js',
+				src: 'build/js/test1-test2.js',
 				dest: 'build/js/<%=pkg.name%>-<%=pkg.version%>.min.js'
 			}
 		},
@@ -53,13 +53,13 @@ module.exports = function (grunt) {
         },
         concat: {
             build:{
-                src:['src/js/test1.js', 'src/js/test2.js'],
+                src: 'src/js/*.js',
                 dest:'build/js/test1-test2.js'
             }
         },
         clean: {
         	
-        	src: 'src/js/test1.js'
+        	src: 'build/js/*.js'
 
         }
 	});
